@@ -1,22 +1,25 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8o5qo3on08yk"]
+[gd_scene load_steps=11 format=3 uid="uid://b8o5qo3on08yk"]
 
-[ext_resource type="StyleBox" uid="uid://p0auemtkkj8y" path="res://buttom_purple.tres" id="1_iq77p"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="1_oi3j2"]
 [ext_resource type="StyleBox" uid="uid://c3tjti5r76j02" path="res://buttom. back.tres" id="1_q2h7b"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="2_758ep"]
+[ext_resource type="StyleBox" uid="uid://5ystst32lykk" path="res://lessons/button_purple.tres" id="2_iq77p"]
 [ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="3_758ep"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="4_hoxo3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq77p"]
+bg_color = Color(0.69333375, 0.58125186, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoxo3"]
 bg_color = Color(0.49138218, 0.5592057, 0.97469205, 1)
 
 [sub_resource type="Theme" id="Theme_hoxo3"]
 default_font_size = 48
-Button/styles/disabled = ExtResource("1_iq77p")
+Button/styles/disabled = SubResource("StyleBoxFlat_iq77p")
 Button/styles/focus = ExtResource("1_q2h7b")
-Button/styles/hover = ExtResource("1_q2h7b")
+Button/styles/hover = ExtResource("2_iq77p")
 Button/styles/normal = ExtResource("1_q2h7b")
-Button/styles/pressed = ExtResource("1_q2h7b")
+Button/styles/pressed = ExtResource("2_iq77p")
 RichTextLabel/colors/default_color = Color(0.21960784, 0.9490196, 0.07058824, 1)
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_hoxo3")
 
