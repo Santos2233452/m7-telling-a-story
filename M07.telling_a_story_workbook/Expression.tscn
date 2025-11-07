@@ -1,0 +1,124 @@
+[gd_scene load_steps=12 format=3 uid="uid://dlvcroe0ckbat"]
+
+[ext_resource type="StyleBox" uid="uid://c3tjti5r76j02" path="res://buttom. back.tres" id="1_1ucjh"]
+[ext_resource type="StyleBox" uid="uid://5ystst32lykk" path="res://lessons/button_purple.tres" id="2_kwail"]
+[ext_resource type="Script" uid="uid://c25y6601xo0m1" path="res://expression.gd" id="3_c74lo"]
+[ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="4_yw1ld"]
+[ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="5_2cxtd"]
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="6_h837e"]
+[ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="7_gmyon"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq77p"]
+bg_color = Color(0.69333375, 0.58125186, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hoxo3"]
+bg_color = Color(0.49138218, 0.5592057, 0.97469205, 1)
+
+[sub_resource type="Theme" id="Theme_hoxo3"]
+default_font_size = 48
+Button/styles/disabled = SubResource("StyleBoxFlat_iq77p")
+Button/styles/focus = ExtResource("1_1ucjh")
+Button/styles/hover = ExtResource("2_kwail")
+Button/styles/normal = ExtResource("1_1ucjh")
+Button/styles/pressed = ExtResource("2_kwail")
+RichTextLabel/colors/default_color = Color(0.21960784, 0.9490196, 0.07058824, 1)
+RichTextLabel/styles/normal = SubResource("StyleBoxFlat_hoxo3")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hoxo3"]
+shader = ExtResource("4_yw1ld")
+shader_parameter/pattern_sampler = ExtResource("5_2cxtd")
+shader_parameter/bg_color = Color(6.160736e-06, 0.67318743, 0.85648793, 1)
+shader_parameter/pattern_color = Color(0.5450214, 0.47911066, 0.46328765, 1)
+shader_parameter/pattern_size = 256.0
+
+[node name="Expressions" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_hoxo3")
+script = ExtResource("3_c74lo")
+
+[node name="Background" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_hoxo3")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 3.0
+offset_right = 5.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_hoxo3")
+color = Color(0.42971787, 0.37188604, 0.91720116, 1)
+
+[node name="Body" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_h837e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Expressions" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 34.0
+offset_right = -13.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_gmyon")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Expressions"]
+layout_mode = 0
+offset_left = 24.0
+offset_top = -21.0
+offset_right = 556.0
+offset_bottom = 183.0
+metadata/_edit_group_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Expressions/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button sophia" type="Button" parent="Expressions/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "sophia"
+
+[node name="Button pink" type="Button" parent="Expressions/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "pink"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Expressions/VBoxContainer"]
+layout_mode = 2
+
+[node name="Button reguar" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "regular"
+
+[node name="Button sad" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "sad"
+
+[node name="Button happy" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "happy"

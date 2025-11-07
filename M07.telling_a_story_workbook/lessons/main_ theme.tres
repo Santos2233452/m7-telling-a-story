@@ -2,4 +2,6 @@
 
 [resource]
 default_font_size = 48
-RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+HBoxContainer/constants/separation = 20
+RichTextLabel/colors/default_color = Color(0.7771769, 0.7771769, 0.7771769, 1)
+VBoxContainer/constants/separation = 20
