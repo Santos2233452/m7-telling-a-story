@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://c25y6601xo0m1" path="res://expression.gd" id="3_c74lo"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="4_yw1ld"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="5_2cxtd"]
-[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="6_h837e"]
+[ext_resource type="Texture2D" uid="uid://vb24hfgkeyti" path="res://assets/pink.png" id="6_c74lo"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="7_gmyon"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq77p"]
@@ -64,7 +64,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("6_h837e")
+texture = ExtResource("6_c74lo")
 expand_mode = 1
 stretch_mode = 5
 
