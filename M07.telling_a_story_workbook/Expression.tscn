@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://c25y6601xo0m1" path="res://expression.gd" id="3_c74lo"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="4_yw1ld"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="5_2cxtd"]
-[ext_resource type="Texture2D" uid="uid://vb24hfgkeyti" path="res://assets/pink.png" id="6_c74lo"]
+[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="6_c74lo"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="7_gmyon"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq77p"]
@@ -95,12 +95,12 @@ metadata/_edit_group_ = true
 [node name="HBoxContainer" type="HBoxContainer" parent="Expressions/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button sophia" type="Button" parent="Expressions/VBoxContainer/HBoxContainer"]
+[node name="ButtonSophia" type="Button" parent="Expressions/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "sophia"
 
-[node name="Button pink" type="Button" parent="Expressions/VBoxContainer/HBoxContainer"]
+[node name="ButtonPink" type="Button" parent="Expressions/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "pink"
@@ -108,17 +108,17 @@ text = "pink"
 [node name="HBoxContainer2" type="HBoxContainer" parent="Expressions/VBoxContainer"]
 layout_mode = 2
 
-[node name="Button reguar" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
+[node name="ButtonRegular" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "regular"
 
-[node name="Button sad" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
+[node name="ButtonSad" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "sad"
 
-[node name="Button happy" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
+[node name="ButtonHappy" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
 text = "happy"
