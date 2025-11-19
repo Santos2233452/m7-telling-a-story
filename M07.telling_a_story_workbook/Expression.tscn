@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://c25y6601xo0m1" path="res://expression.gd" id="3_c74lo"]
 [ext_resource type="Shader" uid="uid://cs15e2hgd2lan" path="res://assets/sliding_background.gdshader" id="4_yw1ld"]
 [ext_resource type="Texture2D" uid="uid://bnly1gkbxw6b5" path="res://assets/bubble_pattern.png" id="5_2cxtd"]
-[ext_resource type="Texture2D" uid="uid://copkt78vgp37i" path="res://assets/sophia.png" id="6_c74lo"]
+[ext_resource type="Texture2D" uid="uid://vb24hfgkeyti" path="res://assets/pink.png" id="6_c74lo"]
 [ext_resource type="Texture2D" uid="uid://d000xjtr4iqtk" path="res://assets/emotion_regular.png" id="7_gmyon"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iq77p"]
@@ -68,7 +68,7 @@ texture = ExtResource("6_c74lo")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Expressions" type="TextureRect" parent="."]
+[node name="Expression" type="TextureRect" parent="Body"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -84,41 +84,43 @@ texture = ExtResource("7_gmyon")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Expressions"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
-offset_left = 24.0
-offset_top = -21.0
-offset_right = 556.0
-offset_bottom = 183.0
+offset_left = 23.0
+offset_top = 13.0
+offset_right = 573.0
+offset_bottom = 217.0
 metadata/_edit_group_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Expressions/VBoxContainer"]
-layout_mode = 2
-
-[node name="ButtonSophia" type="Button" parent="Expressions/VBoxContainer/HBoxContainer"]
+[node name="RowBodies" type="HBoxContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "sophia"
 
-[node name="ButtonPink" type="Button" parent="Expressions/VBoxContainer/HBoxContainer"]
+[node name="ButtonSophia" type="Button" parent="VBoxContainer/RowBodies"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "pink"
+text = "Sophia"
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Expressions/VBoxContainer"]
-layout_mode = 2
-
-[node name="ButtonRegular" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
+[node name="ButtonPink" type="Button" parent="VBoxContainer/RowBodies"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "regular"
+text = "Pink"
 
-[node name="ButtonSad" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
+[node name="RowExpressions" type="HBoxContainer" parent="VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "sad"
 
-[node name="ButtonHappy" type="Button" parent="Expressions/VBoxContainer/HBoxContainer2"]
+[node name="ButtonRegular" type="Button" parent="VBoxContainer/RowExpressions"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "happy"
+text = "Regular"
+
+[node name="ButtonSad" type="Button" parent="VBoxContainer/RowExpressions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Sad"
+
+[node name="ButtonHappy" type="Button" parent="VBoxContainer/RowExpressions"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Happy"
